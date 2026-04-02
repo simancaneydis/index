@@ -201,33 +201,3 @@
                 </div>
 
                 <button type="submit" class="submit-btn">Agendar Pedido por WhatsApp</button>
-            </form>
-        </div>
-
-        <div class="footer">
-            <p>Tus datos están seguros y solo se usarán para coordinar tu envío de forma personalizada.</p>
-            <p>&copy; 2026 Neydis Simanca. Todos los derechos reservados.</p>
-        </div>
-    </div>
-
-    <script>
-        const precioUnitario = 150000; 
-        const telefono = "573148182465";
-
-        document.getElementById('orderForm').addEventListener('submit', function(e) {
-            e.preventDefault(); 
-
-            let nombre = document.getElementById('nombre').value;
-            let ciudad = document.getElementById('ciudad').value;
-            let cantidad = document.getElementById('cantidad').value;
-            let notas = document.getElementById('notas').value;
-
-            let totalPagar = cantidad * precioUnitario;
-            let totalFormateado = new Intl.NumberFormat('es-CO').format(totalPagar);
-
-            let mensaje = "🌟 *NUEVO PEDIDO - POTIONS* 🌟%0A%0A";
-            mensaje += "Hola, deseo confirmar mi orden con los siguientes datos:%0A%0A";
-            mensaje += "*Nombre:* " + nombre + "%0A";
-            mensaje += "*Dirección:* " + ciudad + "%0A";
-            mensaje += "*Cantidad:* " + cantidad + " caja(s)%0A";
-            mensaje
